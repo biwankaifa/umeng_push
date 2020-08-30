@@ -53,6 +53,10 @@ abstract class UmengNotification
         $this->appMasterSecret = $secret;
     }
 
+    /**
+     * @return bool
+     * @throws UmengException
+     */
     //return TRUE if it's complete, otherwise throw exception with details
     function isComplete()
     {
@@ -64,6 +68,10 @@ abstract class UmengNotification
         return TRUE;
     }
 
+    /**
+     * @param $arr
+     * @throws UmengException
+     */
     private function checkArrayValues($arr)
     {
         foreach ($arr as $key => $value) {
@@ -79,6 +87,10 @@ abstract class UmengNotification
     // Set key/value for $data array, for the keys which can be set please see $DATA_KEYS, $PAYLOAD_KEYS, $BODY_KEYS, $POLICY_KEYS
     abstract function setPredefinedKeyValue($key, $value);
 
+    /**
+     * @return mixed
+     * @throws UmengException
+     */
     //send the notification to umeng, return response data if SUCCESS , otherwise throw Exception with details.
     function send()
     {
