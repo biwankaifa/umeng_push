@@ -1,0 +1,28 @@
+{
+    "name": "biwankaifa/umeng_push",
+    "description": "UMENG推送",
+    "license": "Apache-2.0",
+    "authors": [
+        {
+            "name": "彼玩网络",
+            "email": "1115000280@qq.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.1.0",
+        "topthink/framework": "^6.0",
+        "ext-curl": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "biwankaifa\\umeng_push\\": "src/"
+        }
+    },
+    "extra": {
+        "think": {
+            "config": {
+                "umeng": "src/config.php"
+            }
+        }
+    }
+}
